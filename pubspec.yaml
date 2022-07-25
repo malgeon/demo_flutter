@@ -16,6 +16,23 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
+  http: ^0.13.4
+
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+
+  demo_theme:
+    path: packages/demo_theme
+  demo_ui:
+    path: packages/demo_ui
+  data:
+    path: packages/data
+  demo_components:
+    path: packages/demo_components
+
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -24,6 +41,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
 
   assets:
     - assets/images/components/
