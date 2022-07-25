@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:demo_theme/src/demo_theme.dart';
+import 'package:demo_theme/demo_theme.dart';
 
 /// {@template character_theme}
 /// Base class for creating character themes.

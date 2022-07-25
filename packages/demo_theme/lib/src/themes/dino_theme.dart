@@ -1,4 +1,4 @@
-import 'package:demo_theme/src/demo_theme.dart';
+import 'package:demo_theme/demo_theme.dart';
 
 /// {@template dino_theme}
 /// Defines Dino character theme assets and attributes.
