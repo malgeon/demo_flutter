@@ -55,4 +55,7 @@ abstract class DemoTextStyle {
     package: _fontPackage,
     color: DemoColors.yellow,
   );
+
+  static const kTitleTextStyle =
+  TextStyle(color: DemoColors.red, fontSize: 24.0, fontWeight: FontWeight.bold);
 }

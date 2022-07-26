@@ -40,4 +40,11 @@ abstract class DemoColors {
 
   /// Color: 0xFF274E54
   static const Color crtBackground = Color(0xFF274E54);
+
+  static const kButtonDarkColor = Color(0xFF333333);
+  static const kLightColor = Color(0xFF525252);
+  static const kTextColor = Color(0xFFb3b3b3);
+  static const kTextLightColor = Color(0xFFe6e6e6);
+  static const kButtonBlueColor = Color(0xFF0071eb);
+  static const kDarkColor = Color(0xFF6c6c6c);
 }
