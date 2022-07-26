@@ -1,5 +1,5 @@
+import 'package:demo_flutter/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
-
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({Key? key}) : super(key: key);
@@ -11,8 +11,7 @@ class ProfileCard extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(5.0),
-            child: Image(
-              image: AssetImage("assets/images/dog.jpg"),
+            child: Assets.images.modu.dog.image(
               width: 100.0,
               height: 100.0,
             ),

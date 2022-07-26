@@ -48,6 +48,8 @@ flutter:
     - assets/images/bonus_animation/
     - assets/images/score/
     - assets/images/loading_game/
+    - assets/images/modu/
+
 
 flutter_gen:
   line_length: 80

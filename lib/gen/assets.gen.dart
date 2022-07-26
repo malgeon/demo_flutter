@@ -18,6 +18,7 @@ class $AssetsImagesGen {
       const $AssetsImagesComponentsGen();
   $AssetsImagesLoadingGameGen get loadingGame =>
       const $AssetsImagesLoadingGameGen();
+  $AssetsImagesModuGen get modu => const $AssetsImagesModuGen();
   $AssetsImagesScoreGen get score => const $AssetsImagesScoreGen();
 }
 
@@ -63,6 +64,41 @@ class $AssetsImagesLoadingGameGen {
   /// File path: assets/images/loading_game/io_pinball.png
   AssetGenImage get ioPinball =>
       const AssetGenImage('assets/images/loading_game/io_pinball.png');
+}
+
+class $AssetsImagesModuGen {
+  const $AssetsImagesModuGen();
+
+  /// File path: assets/images/modu/big_buck_bunny_poster.jpg
+  AssetGenImage get bigBuckBunnyPoster =>
+      const AssetGenImage('assets/images/modu/big_buck_bunny_poster.jpg');
+
+  /// File path: assets/images/modu/dog.jpg
+  AssetGenImage get dog => const AssetGenImage('assets/images/modu/dog.jpg');
+
+  /// File path: assets/images/modu/episode_1.jpg
+  AssetGenImage get episode1 =>
+      const AssetGenImage('assets/images/modu/episode_1.jpg');
+
+  /// File path: assets/images/modu/episode_2.jpg
+  AssetGenImage get episode2 =>
+      const AssetGenImage('assets/images/modu/episode_2.jpg');
+
+  /// File path: assets/images/modu/episode_3.jpg
+  AssetGenImage get episode3 =>
+      const AssetGenImage('assets/images/modu/episode_3.jpg');
+
+  /// File path: assets/images/modu/les_miserables_poster.jpg
+  AssetGenImage get lesMiserablesPoster =>
+      const AssetGenImage('assets/images/modu/les_miserables_poster.jpg');
+
+  /// File path: assets/images/modu/minari_poster.jpg
+  AssetGenImage get minariPoster =>
+      const AssetGenImage('assets/images/modu/minari_poster.jpg');
+
+  /// File path: assets/images/modu/the_book_of_fish_poster.jpg
+  AssetGenImage get theBookOfFishPoster =>
+      const AssetGenImage('assets/images/modu/the_book_of_fish_poster.jpg');
 }
 
 class $AssetsImagesScoreGen {
