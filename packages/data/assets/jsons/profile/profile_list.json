@@ -1,0 +1,19 @@
+{
+  "profiles" : [
+    {
+      "username": "댕댕이",
+      "s_id": "main",
+      "description": "여긴 댕댕이"
+    },
+    {
+      "username": "냥냥이",
+      "s_id": "test1",
+      "description": "여긴 냥냥이"
+    },
+    {
+      "username": "용용이",
+      "s_id": "test2",
+      "description": "여긴 용용이"
+    }
+  ]
+}

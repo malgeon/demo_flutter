@@ -22,20 +22,20 @@ class ProfilePageView extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "MODU PLAY",
           style: kTitleTextStyle,
         ),
-        actions: [
+        actions: const [
           Icon(FontAwesomeIcons.pen, size: 18.0),
-          const SizedBox(width: 12.0)
+          SizedBox(width: 12.0)
         ],
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "모두의플레이를 시청할 프로필을 선택하세요.",
               style: TextStyle(
                 color: Colors.white,
@@ -48,7 +48,7 @@ class ProfilePageView extends StatelessWidget {
               // 1
               child: Wrap(
                 spacing: 25.0,
-                children: [
+                children: const [
                   ProfileCard(),
                   AddCard(),
                 ],
