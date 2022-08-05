@@ -59,6 +59,7 @@ class ProfilePageView extends StatelessWidget {
                         if (state is ProfileSuccessState) {
                           return ItemView(items: state.entries);
                         } else {
+                          context.read<ProfileBloc>().add(ProfileRequested());
                           return const Center(child: Text('Empty'));
                         }
                       },

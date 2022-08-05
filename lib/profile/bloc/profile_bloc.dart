@@ -21,8 +21,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     Emitter<ProfileState> emit,
   ) async {
     try {
-      emit(LoadingState());
-
+      // emit(LoadingState());
       final entries = await _profileRepository.fetchProfile();
       emit(ProfileSuccessState(entries: entries));
     } catch (error, stackTrace) {
