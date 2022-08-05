@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
-class Profile extends Equatable {
-  const Profile(this.sid, this.name);
+class ProfileEntryData extends Equatable {
+  const ProfileEntryData(this.sid, this.name);
 
   final String sid;
   final String name;

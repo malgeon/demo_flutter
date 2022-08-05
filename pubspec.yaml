@@ -30,6 +30,8 @@ dependencies:
     path: packages/data
   demo_components:
     path: packages/demo_components
+  profile_repository:
+    path: packages/profile_repository
 
 
 
