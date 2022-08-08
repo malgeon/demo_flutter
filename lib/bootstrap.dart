@@ -27,14 +27,14 @@ Future<void> bootstrap(BootstrapBuilder builder) async {
   };
 
   await runZonedGuarded(
-        () async {
+    () async {
       await BlocOverrides.runZoned(
-            () async => runApp(
+        () async => runApp(
           await builder(),
         ),
         blocObserver: AppBlocObserver(),
       );
     },
-        (error, stackTrace) => log(error.toString(), stackTrace: stackTrace),
+    (error, stackTrace) => log(error.toString(), stackTrace: stackTrace),
   );
 }

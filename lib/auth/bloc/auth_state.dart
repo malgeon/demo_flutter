@@ -11,21 +11,35 @@ enum AuthenticationStatus {
   unauthenticated,
 }
 
-class AuthState extends Equatable {
-  const AuthState._({
-    this.status = AuthenticationStatus.unknown,
-  });
+// abstract class AuthState extends Equatable {
+//   const AuthState._({
+//     this.status = AuthenticationStatus.unknown,
+//   });
+//
+//   const AuthState.unknown() : this._();
+//
+//   const AuthState.authenticated()
+//       : this._(status: AuthenticationStatus.authenticated);
+//
+//   const AuthState.unauthenticated()
+//       : this._(status: AuthenticationStatus.unauthenticated);
+//
+//   final AuthenticationStatus status;
+//
+//   @override
+//   List<Object?> get props => [status];
+// }
 
-  const AuthState.unknown() : this._();
+abstract class AuthState extends Equatable {
+  const AuthState();
+}
 
-  const AuthState.authenticated()
-      : this._(status: AuthenticationStatus.authenticated);
+class AuthenticatedState extends AuthState {
+  const AuthenticatedState({required this.sid});
 
-  const AuthState.unauthenticated()
-      : this._(status: AuthenticationStatus.unauthenticated);
-
-  final AuthenticationStatus status;
+  final String sid;
 
   @override
-  List<Object?> get props => [status];
+  // TODO: implement props
+  List<Object?> get props => [sid];
 }

@@ -7,6 +7,7 @@ import 'package:demo_flutter/l10n/l10n.dart';
 import 'package:demo_flutter/profile/profile.dart';
 import 'package:profile_repository/profile_repository.dart';
 
+import '../../profile/bloc/profile_bloc.dart';
 import '../../profile/temp_constant.dart';
 
 class App extends StatelessWidget {
@@ -41,22 +42,26 @@ class AppView extends StatelessWidget {
       providers: [
         RepositoryProvider.value(value: _profileRepository),
       ],
-      child: MaterialApp(
-        theme: ThemeData.dark().copyWith(
-          scaffoldBackgroundColor: Colors.black,
-          appBarTheme: AppBarTheme(color: Colors.black),
-          textTheme: TextTheme(
-            // 1
-            bodyText2: TextStyle(color: kTextColor),
-          ),
-        ),
-        localizationsDelegates: const [
-          AppLocalizations.delegate,
-          GlobalMaterialLocalizations.delegate,
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (_) => ProfileBloc(profileRepository: _profileRepository)),
         ],
-        supportedLocales: AppLocalizations.supportedLocales,
-        home: const ProfilePage(),
-      ),
+        child: MaterialApp(
+          theme: ThemeData.dark().copyWith(
+            scaffoldBackgroundColor: Colors.black,
+            appBarTheme: const AppBarTheme(color: Colors.black),
+            textTheme: const TextTheme(
+              bodyText2: TextStyle(color: kTextColor),
+            ),
+          ),
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: const ProfilePage(),
+        ),
+      )
     );
   }
 }
