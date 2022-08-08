@@ -1,4 +1,5 @@
 import 'package:demo_flutter/gen/assets.gen.dart';
+import 'package:demo_flutter/main/view/view.dart';
 import 'package:flutter/material.dart';
 
 class ProfileCard extends StatelessWidget {
@@ -31,7 +32,7 @@ class ProfileCard extends StatelessWidget {
       ),
       // 1
       onTap: () {
-        // Navigator.pushNamed(context, MainScreens.routeName);
+        Navigator.push(context, MainPage.route());
       },
     );
   }

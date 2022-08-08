@@ -6,8 +6,8 @@ class AddCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
-        Container(
+      children: const [
+        SizedBox(
           height: 100.0,
           width: 100.0,
           child: Icon(
