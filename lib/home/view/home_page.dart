@@ -1,6 +1,9 @@
+import 'package:demo_flutter/session/bloc/session_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_flutter/home/component/component.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 
 class HomePage extends StatefulWidget {
   static Route route() {
@@ -80,13 +83,23 @@ class _HomePageState extends State<HomePage> {
               slivers: [
                 SliverAppBar(
                   backgroundColor: Colors.transparent,
-                  leading: const Center(
-                    child: Text(
-                      "M",
-                      style: TextStyle(
-                          fontSize: 26.0,
-                          color: Colors.red,
-                          fontWeight: FontWeight.bold),
+                  leading: Center(
+                    child: InkWell(
+                      onTap: () {
+                        context.read<SessionBloc>().add(const SessionChanged(sid: "abc", url: "empty"));
+                      },
+                      child:
+                      BlocBuilder<SessionBloc, SessionState>(
+                        builder: (context, state) {
+                          return Text(
+                            state.sid,
+                            style: const TextStyle(
+                                fontSize: 26.0,
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold),
+                          );
+                        },
+                      ),
                     ),
                   ),
                   actions: [
@@ -119,7 +132,13 @@ class _HomePageState extends State<HomePage> {
                       Text("영화"),
                       Text("내가 찜한 콘텐츠"),
                     ],
-                  ), toolbarTextStyle: const TextTheme(headline6: TextStyle(fontSize: 18.0)).bodyText2, titleTextStyle: const TextTheme(headline6: TextStyle(fontSize: 18.0)).headline6,
+                  ),
+                  toolbarTextStyle:
+                      const TextTheme(headline6: TextStyle(fontSize: 18.0))
+                          .bodyText2,
+                  titleTextStyle:
+                      const TextTheme(headline6: TextStyle(fontSize: 18.0))
+                          .headline6,
                 ),
                 SliverToBoxAdapter(
                   child: GestureDetector(
@@ -188,7 +207,7 @@ class _HomePageState extends State<HomePage> {
                               scrollDirection: Axis.horizontal,
                               children: List.generate(
                                 posters.length,
-                                    (index) => RankPoster(
+                                (index) => RankPoster(
                                   rank: (index + 1).toString(),
                                   posterUrl: posters[index],
                                 ),
@@ -225,7 +244,7 @@ class _HomePageState extends State<HomePage> {
                               scrollDirection: Axis.horizontal,
                               children: List.generate(
                                 posters.length,
-                                    (index) => Poster(
+                                (index) => Poster(
                                   posterUrl: posters[index],
                                 ),
                               ),
@@ -326,8 +345,7 @@ class _HomePageState extends State<HomePage> {
                     const Divider(),
                     GestureDetector(
                       behavior: HitTestBehavior.translucent,
-                      onTap: () {
-                      },
+                      onTap: () {},
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
