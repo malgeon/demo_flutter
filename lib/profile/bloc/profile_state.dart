@@ -1,7 +1,5 @@
 part of 'profile_bloc.dart';
 
-
-
 abstract class ProfileState extends Equatable {
   const ProfileState();
 }
@@ -17,7 +15,6 @@ class InitialState extends ProfileState {
 }
 
 class ProfileSuccessState extends ProfileState {
-
   const ProfileSuccessState({required this.entries});
 
   final List<ProfileEntryData> entries;
